@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detetive do Jornal — 5 Casos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="masthead">
+    <div class="brand">O DETETIVE DO JORNAL</div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="kicker">Jogo de jornalismo e investigação</div>
+      <h1>Investiga.<br>Verifica.<br>Descobre.</h1>
+      <p class="lead">Lê a notícia com atenção, analisa as provas recolhidas e consulta a lista de suspeitos no painel lateral. No fim, identifica o culpado. <strong>Não perdes pontos quando erras.</strong></p>
+    </div>
+    <div class="scoreboard">
+      <div>PONTUAÇÃO</div>
+      <div class="score" id="score">0</div>
+      <div>casos concluídos: <span id="done">0</span>/5</div>
+      <div class="progress"><i id="bar"></i></div>
+    </div>
+  </section>
+
+  <section id="game">
+    <div class="case-tabs" id="tabs"></div>
+
+    <div class="game-layout" id="gameLayout">
+      <div class="case-col" id="caseArea"></div>
+
+      <aside class="suspect-nav" id="suspectNav" aria-label="Suspeitos do caso">
+        <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-expanded="true" aria-controls="suspectList">
+          <span class="chev" id="chev">▶</span>
+          <span class="nav-label">Suspeitos</span>
+        </button>
+        <div class="suspect-list" id="suspectList"></div>
+        <button class="confirm" id="confirmBtn" onclick="checkVerdict()">
+          <span class="confirm-icon">✓</span>
+          <span class="confirm-text">Confirmar suspeito</span>
+        </button>
+      </aside>
+    </div>
+
+    <div class="final" id="final">
+      <h2>📰 Edição encerrada!</h2>
+      <p id="finalText"></p>
+      <button class="btn" onclick="location.reload()">Jogar novamente</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <strong>O Detetive do Jornal</strong><br>
+  Aprende jornalismo enquanto investigas.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
